@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-surface text-on-surface font-sans antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 bg-primary text-on-primary font-sans text-sm font-medium tracking-widest uppercase rounded-lg transition-all duration-300 hover:bg-primary-container hover:shadow-card-hover;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 border border-primary text-primary font-sans text-sm font-medium tracking-widest uppercase rounded-lg transition-all duration-300 hover:bg-secondary-container;
+  }
+
+  .chip {
+    @apply inline-block px-3 py-1 text-xs font-medium tracking-widest uppercase rounded-full;
+  }
+
+  .section-label {
+    @apply font-sans text-label-lg font-medium tracking-widest uppercase text-on-surface-variant;
+  }
+
+  .container-xl {
+    @apply max-w-container mx-auto px-5 md:px-10 lg:px-20;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

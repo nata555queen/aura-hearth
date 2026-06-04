@@ -1,0 +1,66 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./index.html', './src/**/*.{js,jsx}'],
+  theme: {
+    extend: {
+      colors: {
+        surface: '#fbf9f4',
+        'surface-dim': '#dbdad5',
+        'surface-container': '#f0eee9',
+        'surface-container-high': '#eae8e3',
+        'surface-container-highest': '#e4e2dd',
+        'surface-container-low': '#f5f3ee',
+        'on-surface': '#1b1c19',
+        'on-surface-variant': '#454842',
+        outline: '#767872',
+        'outline-variant': '#c6c7c0',
+        primary: '#171916',
+        'primary-container': '#2c2e2a',
+        'on-primary': '#ffffff',
+        'inverse-primary': '#c6c7c1',
+        secondary: '#6b5c4c',
+        'secondary-container': '#f4dfcb',
+        'on-secondary': '#ffffff',
+        'on-secondary-container': '#716252',
+        tertiary: '#161a0c',
+        'tertiary-container': '#2a2f1f',
+        'tertiary-fixed': '#e0e5cc',
+      },
+      fontFamily: {
+        serif: ['"Libre Caslon Text"', 'Georgia', 'serif'],
+        sans: ['"DM Sans"', 'system-ui', 'sans-serif'],
+      },
+      fontSize: {
+        'display-lg': ['64px', { lineHeight: '72px', letterSpacing: '-0.02em' }],
+        'headline-lg': ['48px', { lineHeight: '56px' }],
+        'headline-md': ['32px', { lineHeight: '40px' }],
+        'headline-sm': ['24px', { lineHeight: '32px' }],
+        'headline-mobile': ['36px', { lineHeight: '44px' }],
+        'body-lg': ['18px', { lineHeight: '28px' }],
+        'body-md': ['16px', { lineHeight: '24px' }],
+        'label-lg': ['14px', { lineHeight: '20px', letterSpacing: '0.05em' }],
+      },
+      maxWidth: {
+        container: '1280px',
+      },
+      borderRadius: {
+        DEFAULT: '4px',
+        md: '6px',
+        lg: '8px',
+        xl: '12px',
+      },
+      boxShadow: {
+        card: '0 8px 30px 0 rgba(23, 25, 22, 0.04)',
+        'card-hover': '0 12px 40px 0 rgba(23, 25, 22, 0.08)',
+      },
+      spacing: {
+        xs: '4px',
+        sm: '12px',
+        md: '24px',
+        lg: '48px',
+        xl: '80px',
+      },
+    },
+  },
+  plugins: [],
+}
