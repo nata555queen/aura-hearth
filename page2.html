@@ -1,0 +1,328 @@
+<!DOCTYPE html><html class="dark" lang="ru" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Портфолио | Территория ХОУМ</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@300;400;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            -webkit-font-smoothing: antialiased;
+        }
+        .glass-card {
+            background: rgba(26, 26, 26, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at 50% 50%, rgba(142, 66, 45, 0.15) 0%, rgba(19, 19, 19, 0) 70%);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        html { scroll-behavior: smooth; }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "on-primary": "#5a1b09",
+                        "tertiary": "#c8c6c5",
+                        "background": "#131313",
+                        "primary-fixed-dim": "#ffb5a1",
+                        "primary": "#ffb5a1",
+                        "secondary-fixed": "#e2e2e2",
+                        "on-primary-container": "#ffc1b1",
+                        "surface": "#131313",
+                        "error-container": "#93000a",
+                        "inverse-on-surface": "#313030",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "secondary-container": "#454747",
+                        "outline": "#a28c86",
+                        "error": "#ffb4ab",
+                        "inverse-surface": "#e5e2e1",
+                        "surface-tint": "#ffb5a1",
+                        "on-error": "#690005",
+                        "on-surface-variant": "#dac1bb",
+                        "on-tertiary-container": "#d1cece",
+                        "surface-container": "#201f1f",
+                        "on-primary-fixed": "#3b0900",
+                        "on-surface": "#e5e2e1",
+                        "on-secondary-container": "#b4b5b5",
+                        "inverse-primary": "#954832",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "secondary": "#c6c6c7",
+                        "outline-variant": "#54433e",
+                        "tertiary-fixed": "#e5e2e1",
+                        "on-background": "#e5e2e1",
+                        "surface-container-lowest": "#0e0e0e",
+                        "surface-container-highest": "#353534",
+                        "on-secondary-fixed-variant": "#454747",
+                        "primary-fixed": "#ffdbd1",
+                        "on-primary-fixed-variant": "#77311d",
+                        "tertiary-container": "#595858",
+                        "on-secondary": "#2f3131",
+                        "surface-container-high": "#2a2a2a",
+                        "surface-bright": "#3a3939",
+                        "on-error-container": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "primary-container": "#8e422d",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "surface-variant": "#353534",
+                        "surface-container-low": "#1c1b1b",
+                        "surface-dim": "#131313",
+                        "on-tertiary": "#313030"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "section-gap": "160px",
+                        "gutter": "24px",
+                        "unit": "8px",
+                        "margin-desktop": "80px",
+                        "container-max": "1440px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Libre Caslon Text"],
+                        "body-md": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-xl-mobile": ["Libre Caslon Text"],
+                        "display-lg-mobile": ["Libre Caslon Text"],
+                        "body-lg": ["Inter"],
+                        "headline-xl": ["Libre Caslon Text"],
+                        "display-lg": ["Libre Caslon Text"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-xl-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "400"}],
+                        "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-xl": ["48px", {"lineHeight": "56px", "fontWeight": "400"}],
+                        "display-lg": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation -->
+<header class="fixed top-0 left-0 w-full bg-surface/80 backdrop-blur-xl z-[100] border-b border-outline-variant/10">
+<nav class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="font-headline-lg text-on-surface uppercase tracking-widest cursor-pointer text-xl md:text-2xl">
+                Территория ХОУМ
+            </div>
+<!-- Desktop Links -->
+<div class="hidden md:flex gap-gutter items-center">
+<a class="font-label-md text-label-md text-primary transition-colors duration-300" href="#">Портфолио</a>
+<a class="font-label-md text-label-md text-on-surface hover:text-primary transition-colors duration-300" href="#">Услуги</a>
+<a class="font-label-md text-label-md text-on-surface hover:text-primary transition-colors duration-300" href="#">Процесс</a>
+<a class="font-label-md text-label-md text-on-surface hover:text-primary transition-colors duration-300" href="#">О нас</a>
+<a class="font-label-md text-label-md text-on-surface hover:text-primary transition-colors duration-300" href="#">Контакты</a>
+</div>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-primary p-2" onclick="toggleMenu()">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</nav>
+</header>
+<!-- Mobile Drawer -->
+<div class="fixed inset-0 z-[110] w-full h-full bg-background hidden transition-all duration-500" id="mobile-drawer">
+<div class="flex flex-col justify-center h-full w-full p-margin-mobile">
+<button class="absolute top-8 right-8 text-on-surface" onclick="toggleMenu()">
+<span class="material-symbols-outlined text-4xl" data-icon="close">close</span>
+</button>
+<div class="flex flex-col gap-8">
+<a class="font-headline-xl-mobile text-headline-xl-mobile text-primary border-b border-primary w-fit" href="#">Портфолио</a>
+<a class="font-headline-xl-mobile text-headline-xl-mobile text-on-surface hover:translate-x-2 transition-transform" href="#">Услуги</a>
+<a class="font-headline-xl-mobile text-headline-xl-mobile text-on-surface hover:translate-x-2 transition-transform" href="https://t.me/territoriya_houm">Процесс</a>
+<a class="font-headline-xl-mobile text-headline-xl-mobile text-on-surface hover:translate-x-2 transition-transform" href="#">О нас</a>
+<a class="font-headline-xl-mobile text-headline-xl-mobile text-on-surface hover:translate-x-2 transition-transform" href="#">Контакты</a>
+<a class="font-headline-xl-mobile text-headline-xl-mobile text-on-surface hover:translate-x-2 transition-transform mt-4" href="tel:+79032527373">+7 (903) 252-73-73</a></div>
+</div>
+</div>
+<main class="pt-40">
+<!-- Hero Section -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-section-gap relative transition-all duration-1000 opacity-100 translate-y-0">
+<div class="hero-gradient absolute -top-40 left-0 w-full h-[600px] pointer-events-none"></div>
+<div class="max-w-4xl relative z-10">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-6 leading-tight">
+                    Портфолио
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                    Примеры трансформаций, повышающих ценность недвижимости. Мы создаем пространства, которые продают мечту.
+                </p>
+</div>
+</section>
+<!-- Project Grid -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-section-gap transition-all duration-1000 opacity-100 translate-y-0">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Project 1: Large Featured -->
+<div class="md:col-span-8 group cursor-pointer relative overflow-hidden rounded-lg">
+<div class="aspect-[16/10] overflow-hidden">
+<img alt="Luxury Living Room" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIwMiz7GfsZzn6fxuDB10MlyEdXRQtAe2TmfEQs04wSXJT_TZR67UxMopHdOl7rCQ7kwjv41ucpXMyKw0nThDapWQQsbap41qH-PS4_G9ykn3TzZs32w0MqQFJ9BQIIUVOA0jYCDcKR04NEwCSGm2-KhRXDTFYrVzB0XmnqY1lEtT7eQczWgihAsHwI4lp_I711oVwCnpJ3-kZ6UxIvoMIGdJQbIQ_PyGtRGZFmeSOvkXvEpeBkPhEf6cIOGuC12GkbkodqK1cjXw">
+</div>
+<div class="absolute bottom-0 left-0 w-full p-8 glass-card translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+<div class="flex justify-between items-end">
+<div>
+<span class="inline-block px-3 py-1 mb-3 border border-primary text-primary font-label-md text-[10px] uppercase rounded-full">
+                                    Sold in 4 days
+                                </span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">ЖК «Маяк», Апартаменты 120м²</h3>
+</div>
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="arrow_outward">arrow_outward</span>
+</div>
+</div>
+</div>
+<!-- Project 2: Side Grid -->
+<div class="md:col-span-4 group cursor-pointer relative overflow-hidden rounded-lg">
+<div class="aspect-[4/5] overflow-hidden">
+<img alt="Modern Bedroom" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0xAVjDjCGjjRJZtYBoT87FrL_jn4zuUrdV8fhgQThSmKuYngRtbzX5CXgX1HEGdcIVkrlDYhlKIdR_B0nEw8glAQy8sgUfMMm8garYZLFVxeY5kFTwKja3mXTyugQrO-Ysl6BiTlcNWMPTMnQ1sJ1U6PhaGjE_VUp5GF2M9dkL0L2sv5nI9GNxKs-x3gelR4VF73-olwVSb9r-K-1r5dE1wxOPtoUCoGkf-Evs_HQSmsQWHtUDTmpz9ruRhbVfII-oQBPwg7IxtA">
+</div>
+<div class="absolute bottom-0 left-0 w-full p-6 glass-card translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+<span class="inline-block px-3 py-1 mb-2 border border-primary text-primary font-label-md text-[10px] uppercase rounded-full">
+                            +15% Price Increase
+                        </span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Loft Quarter Bedroom</h3>
+</div>
+</div>
+<!-- Project 3: Wide Layout -->
+<div class="md:col-span-6 group cursor-pointer relative overflow-hidden rounded-lg">
+<div class="aspect-square md:aspect-[4/3] overflow-hidden">
+<img alt="Modern Kitchen" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHq2FDUi9dN2WdGr_oueOHpV5Djt_N8Tku8rmF7YoKHUX_IFPi3hSbqq5CyW_QP97yS8KWUiBeQpVHSuUx5iBXTSZre8PtnsCsyDhRJlXRQ1x8_yKxx-1prC-diJ7FKlD1HyB0V09Rx7DJxYyz_vF2LfHM3frmvrCkx-bDfZ6Bnm-Fmh2qcGWpXh73Erkm2pzq4mK6F7jKe6ioq7ioapn3w96gcCCclw7mCUyMZA1MMXxVwbujy614pRqLmEkZR8UzYRLlnPwZjaI">
+</div>
+<div class="absolute bottom-0 left-0 w-full p-6 glass-card translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+<span class="inline-block px-3 py-1 mb-2 border border-primary text-primary font-label-md text-[10px] uppercase rounded-full">
+                            Sold in 1 week
+                        </span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">The Black Marble Suite</h3>
+</div>
+</div>
+<!-- Project 4: Wide Layout -->
+<div class="md:col-span-6 group cursor-pointer relative overflow-hidden rounded-lg">
+<div class="aspect-square md:aspect-[4/3] overflow-hidden">
+<img alt="Dining Area" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfHct0Nz7WEmFG4pyHGrBTXx7NRz5Nt8TgFVIOXzJdaSXJO3SuFs8z5IIfY4V--DKPClAF0pNmIXkbm7g63M--2d6LAOpuS8WXjDvo_MLywjnW4pvG5eg4A83wzqGmmbHm_xF5-4w9u9U47ue15-s5hX0_8iIMJgWHihqHDiP96IUKFAxhXDguw55UdyDRBmUy1xLGN72PLjbk2gJCX0nsowYfKjHqqV7IN1Ubb2azOeSVq2WyQHPDwZjjUlkFZbmTzfYPzkijRAI">
+</div>
+<div class="absolute bottom-0 left-0 w-full p-6 glass-card translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+<span class="inline-block px-3 py-1 mb-2 border border-primary text-primary font-label-md text-[10px] uppercase rounded-full">
+                            Price Record
+                        </span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Residence Skyline</h3>
+</div>
+</div>
+</div>
+</section>
+<!-- Customer Review Section -->
+<section class="bg-surface-container-low py-section-gap relative overflow-hidden transition-all duration-1000 opacity-100 translate-y-0">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row gap-gutter items-center">
+<div class="md:w-1/2 relative">
+<div class="absolute -top-10 -left-10 w-40 h-40 bg-primary/20 blur-[100px] rounded-full"></div>
+<img alt="Елена Романова, Риелтор" class="w-full max-w-[400px] aspect-[3/4] object-cover rounded-lg border border-outline-variant/20 shadow-2xl relative z-10" src="https://lh3.googleusercontent.com/aida/ADBb0ugf477Liguarb_JFitRTT8ALnkDpItxn1pZq64kFIGeyJR2MoemQb3_xzsPvDyybs4PIIWCAE1MDusjYGi1nYiNVvzBrmOYYHog8DlgturXo4W1oxoNqmkZ8pN_8ZQmJbrDfoBjf818ytX6iZtU0W5ha7-gfcxSNDrLCdb0kvVBhdgUrsrZ-Z8I5yeHhdo7k4ifbIEUVQ7-qqE5eAiSb279q6w_4F9aegu3DnHMFRuJ6d8cx-Z6muvT62k">
+</div>
+<div class="md:w-1/2 mt-12 md:mt-0">
+<span class="material-symbols-outlined text-primary text-5xl mb-6" data-icon="format_quote" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface mb-8 italic">
+                            «Команда Территория ХОУМ не просто расставила мебель. Они создали сценарий жизни, в который наши покупатели влюбились с первого взгляда. Квартира была продана на 20% дороже ожиданий.»
+                        </h2>
+<div class="flex flex-col">
+<span class="font-body-lg text-on-surface font-semibold">Елена Романова</span>
+<span class="font-label-md text-on-surface-variant uppercase tracking-widest">РИЕЛТОР</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-section-gap text-center px-margin-mobile transition-all duration-1000 opacity-100 translate-y-0">
+<div class="max-w-3xl mx-auto border border-outline-variant/10 p-12 md:p-24 rounded-lg glass-card">
+<h2 class="font-display-lg-mobile md:font-headline-xl text-on-surface mb-8">
+                    Готовы преобразить ваше пространство?
+                </h2>
+<p class="font-body-lg text-on-surface-variant mb-12">
+                    Запишитесь на консультацию, и мы подготовим стратегию повышения стоимости вашего объекта.
+                </p>
+<button class="bg-primary-container text-on-primary-container font-label-md py-5 px-10 rounded-lg hover:bg-primary-container/90 transition-all uppercase tracking-widest flex items-center gap-unit mx-auto">
+                    Связаться с нами
+                    <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant/10 w-full py-section-gap">
+<div class="w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto flex flex-col items-start">
+<div class="w-full flex flex-col md:flex-row justify-between items-start mb-20 gap-12">
+<div class="max-w-md">
+<div class="font-headline-lg text-on-surface uppercase tracking-widest mb-6">Территория ХОУМ</div>
+<p class="font-body-md text-on-surface-variant">
+                        Эстетика и стратегия в каждом квадратном метре. Создаем интерьеры, которые приносят прибыль.
+                    </p>
+</div>
+<div class="flex flex-col md:flex-row gap-gutter">
+<div class="flex flex-col gap-4">
+<span class="font-label-md text-primary uppercase">Социальные сети</span>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Instagram</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="https://max.ru/join/kvlE_SFfH7L6QTCZyVloGWckS4ZhR0axuxhz7FVe0io">МАКС</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Pinterest</a>
+</div>
+<div class="flex flex-col gap-4 md:ml-12"><span class="font-label-md text-primary uppercase">Контакты</span><a class="font-body-md text-on-surface-variant hover:text-primary transition-colors mb-4" href="tel:+79032527373">+7 (903) 252-73-73</a>
+<span class="font-label-md text-primary uppercase">Юридическая информация</span>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Политика конфиденциальности</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Оферта</a>
+</div>
+</div>
+</div>
+<div class="w-full pt-8 border-t border-outline-variant/5 flex justify-between items-center text-on-surface-variant font-body-md">
+<span class="">© 2025 Территория ХОУМ. Все права защищены.</span>
+</div>
+</div>
+</footer>
+<script>
+        function toggleMenu() {
+            const drawer = document.getElementById('mobile-drawer');
+            if (drawer.classList.contains('hidden')) {
+                drawer.classList.remove('hidden');
+                setTimeout(() => {
+                    drawer.style.opacity = '1';
+                }, 10);
+                document.body.style.overflow = 'hidden';
+            } else {
+                drawer.style.opacity = '0';
+                setTimeout(() => {
+                    drawer.classList.add('hidden');
+                }, 500);
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+    </script>
+
+
+</body></html>
